@@ -4,9 +4,14 @@
 \usepackage[a4paper]{geometry} % Define document
 \usepackage{graphicx} % Display picture
 \usepackage{subcaption} % Use subfigure (minipage used to be)
+\usepackage{tabularx} % Support advance table
+\usepackage{ltablex} % Table into next page
+\usepackage{makecell} % Create header of table in {tabularx}
 % \usepackage{float} % Align figures
 % \usepackage{ragged2e} % Align text
 % ----------------------------------------
+
+\keepXColumns % Keep X column in ltablex to avoid \item missing error
 
 \begin{document}
 
