@@ -3,16 +3,18 @@
 \usepackage[utf8]{vietnam} % Enable vi language compile 
 \usepackage[a4paper]{geometry} % Define document
 \usepackage{graphicx} % Display picture
-\usepackage{subcaption} % Use subfigure (minipage used to be)
+\usepackage{subcaption} % Use subfigure in \begin ({minipage} used to be)
 \usepackage{tabularx} % Support advance table
 \usepackage{ltablex} % Table into next page
 \usepackage{makecell} % Create header of table in {tabularx}
+\usepackage{tabto} % Support \tab command to tab text 0.5cm (similar to  \hspace{5mm})
 % \usepackage{float} % Align figures
 % \usepackage{ragged2e} % Align text
 % ----------------------------------------
 
 \keepXColumns % Keep X column in ltablex to avoid \item missing error
 
+\input{macros/paragraph.tex}
 \begin{document}
 
 \input{title-page.tex}
