@@ -1,0 +1,152 @@
+\subsection{Cách tiếp cận dự kiến}
+\paragraph{Bản mẫu}
+\tab Đang cập nhật\dots
+
+\paragraph{Kiến trúc}
+\tab Đang cập nhật\dots
+
+\paragraph{Mô hình dữ liệu}
+\tab Đang cập nhật\dots
+
+\paragraph{Các mục tiêu kiểm thử}
+\begin{itemize}
+    \item Load Testing: đo lường hiệu suất của ứng dụng để xác định tốc độ tương tác.
+    \item Reliability Testing: đo lường mức độ xảy ra lỗi của ứng dụng để xác định mức độ lỗi tương tác.
+\end{itemize}
+
+\paragraph{So sánh, đánh giá hệ thống với các hệ thống tương tự}
+\tab \textbf{Bảng so sánh các tính năng cơ bản của các hệ thống}
+
+\begin{tabularx}{\textwidth}{|>{\hsize=.25\hsize\centering\let\newline
+    \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
+    \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
+    \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
+    \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
+    \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
+    \\\arraybackslash}X|}
+    \hline
+    \textbf{Tính năng}
+    & \textbf{...}
+    & \textbf{Stack Hawk}
+    & \textbf{Detectify}
+    & \textbf{Hosted Scan}
+    & \textbf{Idyllum Labs}
+    \\
+    \hline
+    Quét với ZAP 
+    &
+    \checkmark
+    &
+    \checkmark
+    &
+    \checkmark
+    &
+    \checkmark
+    &
+    \checkmark
+    \\
+    \hline
+    \dots
+    &
+    &
+    &
+    &
+    &
+    \\
+    \hline
+\end{tabularx}
+
+\vspace{8cm}
+\textbf{Bảng ưu điểm và khuyết điểm của các hệ thống}
+
+\begin{tabularx}{\textwidth}{|>{\hsize=0.2\hsize\centering\let\newline
+    \\\arraybackslash}X|>{\hsize=0.4\hsize\raggedright\let\newline
+    \\\arraybackslash}X|>{\hsize=0.4\hsize\raggedright\let\newline
+    \\\arraybackslash}X|}
+    \hline
+    \thead{Hệ thống}
+    & 
+    \thead{Ưu điểm}
+    & 
+    \thead{Khuyết điểm}
+    \\
+    \hline
+    Stack Hawk
+    &
+    - Tự động quét trên mỗi PR hoặc trong CI/CD.
+    \newlinecontenttable
+    - Quản lý thông tin kết quả quét, giao diện tường minh, dễ sử dụng.
+    \newlinecontenttable
+    - Đề xuất liên kết chứa thông tin sửa lỗi tìm được.
+    \newlinecontenttable
+    - Tích hợp được với những công cụ quản lý khác có sử dụng CI/CD như: Jira Sotfware, Gitlab, Github Action, Azure Pinelines, Jenkins, Travis CI,\dots
+    \newlinecontenttable
+    - Tài liệu hướng dẫn đầy đủ, chi tiết.
+    &
+    - Cần cấu hình pineline (.yml, .yaml).
+    \newlinecontenttable
+    - Cần Docker image đã build xây dựng sẵn.
+    \newlinecontenttable
+    - Kích hoạt quét bằng command line ở máy local. Cấu hình kích hoạt quét gồm nhiều bước.
+    \newlinecontenttable
+    - Dùng thử một lần mỗi ngày.
+    \\
+    \hline
+    Detectify
+    &
+    &
+    \\
+    \hline
+    Hosted Scan
+    &
+    - Hỗ trợ các loại quét khác như Nmap, OpenVas, SSL/TLS.
+    \newlinecontenttable
+    - Hẹn thời gian đặt lịch quét.
+    \newlinecontenttable
+    - Đề xuất liên kết chứa thông tin sửa lỗi tìm được.
+    \newlinecontenttable
+    - Thông tin scan đầy đủ. Giao diện đơn giản.
+    &
+    - Kết quả scan dường như là dữ liệu gốc, không được xử lý.
+    \newlinecontenttable
+    - Dùng thử 10 lần mỗi tháng.
+    \\
+    \hline
+    Idyllum Labs
+    &
+    - Hỗ trợ các loại quét khác như Nmap, WhatWeb.
+    \newlinecontenttable
+    - Miễn phí hoàn toàn.
+    &
+    - Giao diện khó sử dụng.
+    \newlinecontenttable
+    - Chỉ chấp nhận tên miền gốc (.com,\dots)
+    \newlinecontenttable
+    - Không theo dõi được quá trình, tiến độ quét.
+    \newlinecontenttable
+    - Không lựa chọn hay cấu hình được phương thức quét. Tất cả các loại quét có hỗ trợ được quét chung trong một lần.
+    \\
+    \hline
+\end{tabularx}
+
+\paragraph{Đánh giá}
+\tab Đang cập nhật\dots
+
+\paragraph{Dánh sách các công nghệ, công cụ sử dụng}
+\begin{itemize}
+    \item Jira Software: một công cụ trong bộ công cụ của ứng dụng quản lý Jira, sử dụng mô hình Kanban để thiết kế và triển khai đồ án.
+    \item Confluence: một công cụ trong bộ công cụ của ứng dụng quản lý Jira, dùng để quản lý tài liệu.
+    \item GitHub: dịch vụ lưu trữ và kiễm soát phiên bản mã nguồn sử dụng Git.
+    \item GitHub Pages: dịch vụ được tạo bởi GitHub, cho phép xuất bản trang web hoặc ứng dụng website bằng cách lưu trữ mã nguồn trong GitHub.
+    \item Node.js: môi trường thực thi mã JavaScript bên ngoài trình duyệt.
+    \item MongoDB: cơ sở dữ liệu dạng NoSQL.
+    \item MongoDB Atlas: cloud database của MongoDB.
+    \item OWASP Zed Attack Proxy (ZAP): ứng dụng mã nguồn mở dùng để quét lỗ hổng bảo mật của ứng dụng website.
+    \item Express.js: framework dành cho backend Node.js của ứng dụng website.
+    \item Socket.io: thư viện hỗ trợ giao tiếp real-time giữa frontend và backend, được xây dựng dựa trên giao thức WebSocket.
+    \item Docker: nền tảng để cung cấp các bước triển khai ứng dụng dễ dàng hơn bằng cách sử dụng các containers.
+    \item ReactJS: thư viện JavaScript dùng để xây dựng giao diện website cho người dùng.
+    \item Redux: thư viện JavaScript dùng để quản lý và xử lý trạng thái ứng dụng.
+    \item Google Identity Services API: dùng để thực hiện định danh bằng Google.
+    \item Visual Studio Code: trình biên tập mã được phát triển bởi Microsoft.
+\end{itemize}

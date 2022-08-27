@@ -8,13 +8,17 @@
 \usepackage{ltablex} % Table into next page
 \usepackage{makecell} % Create header of table in {tabularx}
 \usepackage{tabto} % Support \tab command to tab text 0.5cm (similar to  \hspace{5mm})
-% \usepackage{float} % Align figures
-% \usepackage{ragged2e} % Align text
+\usepackage{amssymb} % Use \checkmark to represent V mark
 % ----------------------------------------
 
 \keepXColumns % Keep X column in ltablex to avoid \item missing error
 
-\input{macros/paragraph.tex}
+\input{macros/paragraph.tex} % Add space below \paragraph
+\input{macros/tabularx.tex} % Verticle center text in cell
+\input{macros/thead.tex} % Set \thead to Bold text
+\input{macros/newline-content-table.tex} % Add space \newline
+\input{macros/xmark.tex} % Use new command \xmark to represent X mark
+
 \begin{document}
 
 \input{title-page.tex}
