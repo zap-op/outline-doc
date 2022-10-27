@@ -46,7 +46,6 @@ Kiến trúc triển khai
 
 \paragraph{So sánh, đánh giá hệ thống với các hệ thống tương tự}
 \tab \textbf{Bảng so sánh các tính năng cơ bản của các hệ thống}
-
 \begin{tabularx}{\textwidth}{|>{\hsize=.25\hsize\centering\let\newline
     \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
     \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
@@ -56,32 +55,24 @@ Kiến trúc triển khai
     \\\arraybackslash}X|}
     \hline
     \textbf{Tính năng}
-    & \textbf{...}
-    & \textbf{Stack Hawk}
-    & \textbf{Detectify}
-    & \textbf{Hosted Scan}
-    & \textbf{Idyllum Labs}
+     & \textbf{\applicationname}
+     & \textbf{Stack Hawk}
+     & \textbf{Detectify}
+     & \textbf{Hosted Scan}
+     & \textbf{Idyllum Labs}
     \\
     \hline
-    Quét với ZAP 
-    &
+    Quét với ZAP
+     &
     \checkmark
-    &
+     &
     \checkmark
-    &
+     &
     \checkmark
-    &
+     &
     \checkmark
-    &
+     &
     \checkmark
-    \\
-    \hline
-    \dots
-    &
-    &
-    &
-    &
-    &
     \\
     \hline
 \end{tabularx}
@@ -95,14 +86,14 @@ Kiến trúc triển khai
     \\\arraybackslash}X|}
     \hline
     \thead{Hệ thống}
-    & 
+     &
     \thead{Ưu điểm}
-    & 
+     &
     \thead{Khuyết điểm}
     \\
     \hline
     Stack Hawk
-    &
+     &
     - Tự động quét trên mỗi PR hoặc trong CI/CD.
     \newlinecontenttable
     - Quản lý thông tin kết quả quét, giao diện tường minh, dễ sử dụng.
@@ -112,7 +103,7 @@ Kiến trúc triển khai
     - Tích hợp được với những công cụ quản lý khác có sử dụng CI/CD như: Jira Sotfware, Gitlab, Github Action, Azure Pinelines, Jenkins, Travis CI,\dots
     \newlinecontenttable
     - Tài liệu hướng dẫn đầy đủ, chi tiết.
-    &
+     &
     - Cần cấu hình pineline (.yml, .yaml).
     \newlinecontenttable
     - Cần Docker image đã build xây dựng sẵn.
@@ -122,13 +113,8 @@ Kiến trúc triển khai
     - Dùng thử một lần mỗi ngày.
     \\
     \hline
-    Detectify
-    &
-    &
-    \\
-    \hline
     Hosted Scan
-    &
+     &
     - Hỗ trợ các loại quét khác như Nmap, OpenVas, SSL/TLS.
     \newlinecontenttable
     - Hẹn thời gian đặt lịch quét.
@@ -136,18 +122,18 @@ Kiến trúc triển khai
     - Đề xuất liên kết chứa thông tin sửa lỗi tìm được.
     \newlinecontenttable
     - Thông tin scan đầy đủ. Giao diện đơn giản.
-    &
+     &
     - Kết quả scan dường như là dữ liệu gốc, không được xử lý.
     \newlinecontenttable
     - Dùng thử 10 lần mỗi tháng.
     \\
     \hline
     Idyllum Labs
-    &
+     &
     - Hỗ trợ các loại quét khác như Nmap, WhatWeb.
     \newlinecontenttable
     - Miễn phí hoàn toàn.
-    &
+     &
     - Giao diện khó sử dụng.
     \newlinecontenttable
     - Chỉ chấp nhận tên miền gốc (.com,\dots)
