@@ -1,12 +1,42 @@
 \subsection{Cách tiếp cận dự kiến}
 \paragraph{Bản mẫu}
-\tab Đang cập nhật\dots
+\vspace{0.2\textheight}
+\includegraphics[width=\textwidth]{images/prototype/prototype_25102022/home.png}
+
+\includegraphics[width=\textwidth]{images/prototype/prototype_25102022/home_scanning.png}
+
+\includegraphics[width=\textwidth]{images/prototype/prototype_25102022/signup.png}
+
+\vspace{0.2cm}
+
+\includegraphics[width=\textwidth]{images/prototype/prototype_25102022/dashboard_target.png}
+
+\vspace{0.2cm}
+
+\includegraphics[width=\textwidth]{images/prototype/prototype_25102022/dashboard_result.png}
+
+\vspace{0.2cm}
+
+\includegraphics[width=\textwidth]{images/prototype/prototype_25102022/dashboard_result_opening-sub.png}
 
 \paragraph{Kiến trúc}
-\tab Đang cập nhật\dots
+\tab Kiến trúc Scan Process
+\vspace{2cm}
+
+\includegraphics[width=\textwidth]{images/diagram/diagram_25102022/Scan Process.png}
+
+\newpage
+Kiến trúc triển khai
+\vspace{2cm}
+
+\includegraphics[width=\textwidth]{images/diagram/diagram_25102022/ZAPOP Architecture.png}
 
 \paragraph{Mô hình dữ liệu}
-\tab Đang cập nhật\dots
+\vspace{2cm}
+
+\includegraphics[width=\textwidth]{images/diagram/diagram_25102022/Database Diagram.png}
+
+\vspace{2cm}
 
 \paragraph{Các mục tiêu kiểm thử}
 \begin{itemize}
@@ -16,7 +46,6 @@
 
 \paragraph{So sánh, đánh giá hệ thống với các hệ thống tương tự}
 \tab \textbf{Bảng so sánh các tính năng cơ bản của các hệ thống}
-
 \begin{tabularx}{\textwidth}{|>{\hsize=.25\hsize\centering\let\newline
     \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
     \\\arraybackslash}X|>{\hsize=.15\hsize\centering\let\newline
@@ -26,32 +55,24 @@
     \\\arraybackslash}X|}
     \hline
     \textbf{Tính năng}
-    & \textbf{...}
-    & \textbf{Stack Hawk}
-    & \textbf{Detectify}
-    & \textbf{Hosted Scan}
-    & \textbf{Idyllum Labs}
+     & \textbf{\applicationname}
+     & \textbf{Stack Hawk}
+     & \textbf{Detectify}
+     & \textbf{Hosted Scan}
+     & \textbf{Idyllum Labs}
     \\
     \hline
-    Quét với ZAP 
-    &
+    Quét với ZAP
+     &
     \checkmark
-    &
+     &
     \checkmark
-    &
+     &
     \checkmark
-    &
+     &
     \checkmark
-    &
+     &
     \checkmark
-    \\
-    \hline
-    \dots
-    &
-    &
-    &
-    &
-    &
     \\
     \hline
 \end{tabularx}
@@ -65,14 +86,14 @@
     \\\arraybackslash}X|}
     \hline
     \thead{Hệ thống}
-    & 
+     &
     \thead{Ưu điểm}
-    & 
+     &
     \thead{Khuyết điểm}
     \\
     \hline
     Stack Hawk
-    &
+     &
     - Tự động quét trên mỗi PR hoặc trong CI/CD.
     \newlinecontenttable
     - Quản lý thông tin kết quả quét, giao diện tường minh, dễ sử dụng.
@@ -82,7 +103,7 @@
     - Tích hợp được với những công cụ quản lý khác có sử dụng CI/CD như: Jira Sotfware, Gitlab, Github Action, Azure Pinelines, Jenkins, Travis CI,\dots
     \newlinecontenttable
     - Tài liệu hướng dẫn đầy đủ, chi tiết.
-    &
+     &
     - Cần cấu hình pineline (.yml, .yaml).
     \newlinecontenttable
     - Cần Docker image đã build xây dựng sẵn.
@@ -92,13 +113,8 @@
     - Dùng thử một lần mỗi ngày.
     \\
     \hline
-    Detectify
-    &
-    &
-    \\
-    \hline
     Hosted Scan
-    &
+     &
     - Hỗ trợ các loại quét khác như Nmap, OpenVas, SSL/TLS.
     \newlinecontenttable
     - Hẹn thời gian đặt lịch quét.
@@ -106,18 +122,18 @@
     - Đề xuất liên kết chứa thông tin sửa lỗi tìm được.
     \newlinecontenttable
     - Thông tin scan đầy đủ. Giao diện đơn giản.
-    &
+     &
     - Kết quả scan dường như là dữ liệu gốc, không được xử lý.
     \newlinecontenttable
     - Dùng thử 10 lần mỗi tháng.
     \\
     \hline
     Idyllum Labs
-    &
+     &
     - Hỗ trợ các loại quét khác như Nmap, WhatWeb.
     \newlinecontenttable
     - Miễn phí hoàn toàn.
-    &
+     &
     - Giao diện khó sử dụng.
     \newlinecontenttable
     - Chỉ chấp nhận tên miền gốc (.com,\dots)
@@ -130,7 +146,15 @@
 \end{tabularx}
 
 \paragraph{Đánh giá}
-\tab Đang cập nhật\dots
+\tab - Các hệ thống tương tự đang có trên thị trường khá đa dạng.
+Tuy nhiên, đa phần, mỗi hệ thống đều chỉ tập trung vào một chức năng nhất định trong các loại kiểm thử bảo mật.
+Các hệ thống còn lại có chức năng bao quát như \applicationname có các tính năng mở rộng kèm theo thì yêu cầu nhiều bước cấu hình từ đầu gây ra việc khó sử dụng khi người dùng cần thực hiện công việc đơn giản nhanh chóng.
+Tiếp đó là các hệ thống không trực quan trong quá trình quét hoặc là hiển thị kết quả quét chưa được xử lý hợp lý.
+\newline
+
+- Qua so sánh, đánh giá hệ thống của nhóm với các hệ thống tương tự. 
+Các thành viên nhóm đã đưa ra thống nhất tổng quan về hệ thống \applicationname Thực hiện đúng các kế
+hoạch đề ra theo các mục 2.2 Mục tiêu đề tài và 2.3 Phạm vi của đề tài.
 
 \paragraph{Danh sách các công nghệ, công cụ sử dụng}
 \begin{itemize}
